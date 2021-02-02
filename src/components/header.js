@@ -22,7 +22,7 @@ const Header = ({ title }) => {
 
   useEffect(() => {
     const get = async () => {
-      //const quote = await getQuote(debouncedQuery)
+      const quote = await getQuote(debouncedQuery)
       setQuote(quote)
     }
     get()
@@ -31,7 +31,7 @@ const Header = ({ title }) => {
 
   return <div style={styles.container}>
     <label style={styles.searchLabel} htmlFor = 'ticker'>Search Ticker</label>
-    <input type='text' id='ticker' name='ticker' value={query} onChange={handleSearch}></input>
+    <input type='text' id='ticker' name='ticker' value={query.toUpperCase()} onChange={handleSearch}></input>
     {/* loading indicator */}
     <span style={styles.item}>
       <span style={styles.label}>Price</span>
@@ -54,6 +54,7 @@ export default Header
 const styles = {
   container: {
     color: '#333',
+    background:'#F9F9FB',
     padding: 10
   },
   searchLabel:{

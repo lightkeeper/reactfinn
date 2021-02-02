@@ -1,15 +1,22 @@
 const API_KEY = 'c0cqqs748v6rlbal10hg'
 
 const ROUTES = {
-  QUOTE: (ticker, key) => `https://finnhub.io/api/v1/quote?symbol=${ticker?.toUpperCase()}&token=${key}`
+  QUOTE: (ticker, key) => `https://finnhub.io/api/v1/quote?symbol=${ticker?.toUpperCase()}&token=${key}`,
+  PROFILE: (ticker, key) => `https://finnhub.io/api/v1/stock/profile2?symbol=${ticker?.toUpperCase()}&token=${key}`,
+  PEERS: (ticker, key) => `https://finnhub.io/api/v1/stock/peers?symbol=${ticker?.toUpperCase()}&token=${key}`,
+  NEWS: (ticker, key) => `https://finnhub.io/api/v1/company-news?symbol=${ticker?.toUpperCase()}&token=${key}`,
 }
 
-const getQuote = async (ticker) => {
-  // typical response {"c":135.615,"h":136.31,"l":134.96,"o":135.73,"pc":134.14,"t":1612224000}
-  const response = await fetch(ROUTES.QUOTE(ticker, API_KEY))
+const getRoute = async (route) => {
+  const response = await fetch(route)
   const json = await response.json()
   return json
 }
 
-export { ROUTES, getQuote }
+const getQuote = async (ticker) => getRoute(ROUTES.QUOTE(ticker, API_KEY))
+const getProfile = async (ticker) => getRoute(ROUTES.PROFILE(ticker, API_KEY))
+const getNews = async (ticker) => getRoute(ROUTES.NEWS(ticker, API_KEY))
+const getPeers = function noop() {}
+
+export { ROUTES, getQuote, getProfile, getNews, getPeers }
 

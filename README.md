@@ -1,70 +1,14 @@
-# Getting Started with Create React App
+### Problem Statement
+Using the API provided by https://finnhub.io/ (need to sign up for free API key), build a basic stock ticker query page which fetches data from 3 different endpoints. These endpoints will be used to retrieve company info, current stock prices, latest news, and similar companies (peers). 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The goal of the problem is to exercise understanding of several aspects of developing interfaces at Lightkeeper in a relatively real world scenario. Reading API documentation, creating stateful applications, managing asynchronous dependencies, and designing reusable components are all fundamental in _day-to-day_ work. We are looking for technical competence and completion not visual design and aesthetics, which is why the general layout was provided. 
 
-## Available Scripts
+Though the position is certainly a **react** role, we don't strictly require the use of **react** for this project. The idea is that an individual fluent in one framework should be able to learn another fairly quickly with some guidance. We would much rather the project be completed in the framework you have the most confidence in and can speak clearly about during review. If that framework happens to be **react**; that's great.
 
-In the project directory, you can run:
+We hope the **problem statement** paired with the provided graphic is enough to work from. If not, Anthony is available for answering any clarification questions you may have. 
 
-### `yarn start`
+As a way to further demonstrate your grasp on the technology here are some _bonus_ tasks to take into consideration. We do not want these to distract from the main goal so know there is no penalty for ignoring them. But if you find they align easily with the way you approach the original problem then you're welcome to include them. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* URL parameterize the search query so you can navigate directly to a prefilled ticker
+* Swap the on (enter) event in the search input with a debounced (2-4 seconds) keydown event
+* Include the current "winning" (largest count) recommendation [#recommendation-trends](https://finnhub.io/docs/api#recommendation-trends) in the header on the right edge.

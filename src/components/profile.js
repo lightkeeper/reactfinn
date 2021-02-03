@@ -1,5 +1,7 @@
 import React from 'react'
 
+// 1. pass the company profile info as props 
+// 2. The component should be empty if no profile info is passed or if we get an error when calling the profile API
 const Profile = ({ 
   logo = 'https://www.macworld.co.uk/cmsdata/features/3792765/apple_logo_thumb800.jpg', 
   title = 'Apple', 
@@ -60,6 +62,9 @@ const styles = {
     border: '1px solid #CCC',
     margin: 10,
     padding: 10,
+    background: "#FFF",
+    borderRadius:5
+
   },
   identity: {
     display: 'flex',

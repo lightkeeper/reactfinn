@@ -1,9 +1,6 @@
 import React from "react";
 
-// 1. Pass peers as a prop and add an onClick handler which should update the page with the new selected ticker
-// 2. If no peers found or if we receive an error then no peers should be displayed
-const Peers = () => {
-  const peers = ["TSLA", "AMZ", "MSFT"];
+const Peers = ({ peers = [] }) => {
   return (
     <div style={styles.container}>
       <span style={styles.heading}>Peers</span>

@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { getQuote } from '../utils/connections'
-import useDebounce from '../utils/use-debounce'
-
 
 const Header = ({ title }) => {
   const [query, setQuery] = useState('gme')
-  const debouncedQuery = useDebounce(query, 2000)
   const [quote, setQuote] = useState({
     "c": '-',
     "h": '-',
@@ -14,7 +11,7 @@ const Header = ({ title }) => {
     "pc": '-',
     "t": '-'
   })
-  
+
   const handleSearch = (event) => {
     const ticker = event.target.value
     setQuery(ticker)
@@ -22,12 +19,11 @@ const Header = ({ title }) => {
 
   useEffect(() => {
     const get = async () => {
-      const quote = await getQuote(debouncedQuery)
+      const quote = await getQuote(query)
       setQuote(quote)
     }
     get()
-  }, [debouncedQuery])
-
+  }, [query])
 
   return <div style={styles.container}>
     <label style={styles.searchLabel} htmlFor = 'ticker'>Search Ticker</label>

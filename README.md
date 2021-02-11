@@ -5,7 +5,7 @@ The goal of the problem is to exercise understanding of several aspects of devel
 
 Though the position is certainly a **react** role, we don't strictly require the use of **react** for this project. The idea is that an individual fluent in one framework should be able to learn another fairly quickly with some guidance. We would much rather the project be completed in the framework you have the most confidence in and can speak clearly about during review. If that framework happens to be **react**; that's great.
 
-We hope the **problem statement** paired with the provided graphic is enough to work from. If not, Anthony is available for answering any clarification questions you may have. 
+We hope the **problem statement** paired with the provided graphic is enough to work from. If not, we are available for answering any clarification questions you may have. 
 
 As a way to further demonstrate your grasp on the technology here are some _bonus_ tasks to take into consideration. We do not want these to distract from the main goal so know there is no penalty for ignoring them. But if you find they align easily with the way you approach the original problem then you're welcome to include them. 
 
